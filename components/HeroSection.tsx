@@ -26,13 +26,13 @@ const places = [
 const HeroSection = () => {
   return (
     <main
-      className="relative h-181.25 bg-cover bg-center"
+      className="relative h-181.25 bg-cover bg-center mask-[linear-gradient(to_bottom,transparent,black_0%,black_60%,transparent)]"
       style={{
         backgroundImage: "url('/images/japan-hero-image.png')",
       }}
     >
-      <section className="absolute inset-0 flex flex-col items-center justify-center lg:justify-between bg-black/30">
-        <h1 className="text-6xl md:text-8xl lg:text-[10rem] xl:text-[12rem] leading-none font-bold tracking-wide lg:mt-56">
+      <section className="absolute inset-0 flex flex-col items-center justify-center bg-black/30">
+        <h1 className="text-6xl md:text-8xl lg:text-[10rem] xl:text-[12rem] leading-none font-bold tracking-wide lg:my-32">
           JAPAN
         </h1>
         <div className="hidden lg:flex items-center justify-between gap-32">
