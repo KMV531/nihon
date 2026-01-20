@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Rokkitt, Roboto } from "next/font/google";
 import "./globals.css";
+import Loader from "@/components/Loader";
 
 const rokkitt = Rokkitt({
   variable: "--font-rokkitt",
@@ -30,6 +31,7 @@ export default function RootLayout({
         <link rel="icon" href="/icons/japan-logo.webp" type="image/webp" />
       </head>
       <body className={`${rokkitt.variable} ${roboto.variable} antialiased`}>
+        <Loader />
         {children}
       </body>
     </html>
