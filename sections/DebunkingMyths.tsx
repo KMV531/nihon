@@ -63,8 +63,8 @@ const items = [
 
 const DebunkingMyths = () => {
   return (
-    <main className="mt-52 mask-[linear-gradient(to_bottom,transparent,black_20%,black_75%,transparent)]">
-      <div style={{ height: "700px", position: "relative" }}>
+    <main className="my-40 mask-[linear-gradient(to_bottom,transparent,black_20%,black_75%,transparent)]">
+      <div style={{ height: "100vh", position: "relative" }}>
         <InfiniteMenu items={items} scale={1} />
       </div>
     </main>
