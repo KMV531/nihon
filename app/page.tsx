@@ -1,9 +1,11 @@
-import HeroSection from "@/components/HeroSection";
+import { AboutSection } from "@/sections/AboutSection";
+import HeroSection from "@/sections/HeroSection";
 
 function HomePage() {
   return (
     <main>
       <HeroSection />
+      <AboutSection />
     </main>
   );
 }
