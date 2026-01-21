@@ -555,7 +555,7 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
               }}
             >
               <img
-                className="w-full absolute left-1/2 bottom-[-1px] will-change-transform transition-transform duration-[120ms] ease-out"
+                className="w-full absolute left-1/2 bottom-[-1px] will-change-transform transition-transform duration-[120ms] ease-out translate-y-6"
                 src={avatarUrl}
                 alt={`${name || "User"} avatar`}
                 loading="lazy"
@@ -651,7 +651,7 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
               }}
             >
               <div
-                className="w-full absolute flex flex-col"
+                className="w-full absolute flex flex-col -translate-y-8"
                 style={{ top: "3em", display: "flex", gridArea: "auto" }}
               >
                 <h3

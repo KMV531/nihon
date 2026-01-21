@@ -1,6 +1,7 @@
 "use client";
 
 import CardSwap, { Card } from "@/components/CardSwap";
+import Heading from "@/components/Heading";
 import Image from "next/image";
 
 const CulturalHighlightcards = [
@@ -27,9 +28,7 @@ const CulturalHighlightcards = [
 const CulturalHighlights = () => {
   return (
     <main className="max-w-5xl mx-auto flex items-center justify-between">
-      <h1 className="font-bold text-2xl md:text-4xl lg:text-5xl max-w-md">
-        Essential Highlights: Culture & Landmarks
-      </h1>
+      <Heading other="Essential Highlights: Culture & Landmarks" />
       <div style={{ height: "450px", position: "relative" }}>
         <CardSwap
           cardDistance={60}

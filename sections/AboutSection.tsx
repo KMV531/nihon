@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import Heading from "@/components/Heading";
 
 const TOWNS = [
   {
@@ -8,7 +9,7 @@ const TOWNS = [
     name: "Tokyo",
     description:
       "Tokyo is a mesmerizing blend of futuristic skyscrapers and quiet, ancient shrines. From the neon-lit crossings of Shibuya to the high-end boutiques of Ginza, the city offers an endless energy that redefines urban living. It is a place where tradition meets innovation, creating a unique atmosphere that invites exploration at every single corner.",
-    image: "/images/tokyo-image.png", // Replace with your actual image paths
+    image: "/images/tokyo-image.png",
   },
   {
     id: "kyoto",
@@ -58,9 +59,7 @@ export function AboutSection() {
                 {/* Right Side: Interactive List & Content */}
                 <div className="flex flex-col gap-8">
                   <div className="space-y-6">
-                    <h1 className="font-bold text-2xl md:text-6xl lg:text-7xl">
-                      Tales of Japan
-                    </h1>
+                    <Heading title={"Tales of Japan"} />
                     <p className="text-muted-foreground text-lg leading-relaxed">
                       {town.description}
                     </p>

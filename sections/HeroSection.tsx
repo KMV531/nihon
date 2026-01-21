@@ -1,3 +1,6 @@
+"use client";
+
+import ShinyText from "@/components/ShinyText";
 import Image from "next/image";
 
 const places = [
@@ -33,7 +36,18 @@ const HeroSection = () => {
     >
       <section className="absolute inset-0 flex flex-col items-center justify-center bg-black/30">
         <h1 className="text-6xl md:text-8xl lg:text-[10rem] xl:text-[12rem] leading-none font-bold tracking-wide lg:my-32">
-          JAPAN
+          <ShinyText
+            text="JAPAN"
+            speed={2}
+            delay={0}
+            color="#ffffff"
+            shineColor="#BC0030"
+            spread={120}
+            direction="left"
+            yoyo={false}
+            pauseOnHover={false}
+            disabled={false}
+          />
         </h1>
         <div className="hidden lg:flex items-center justify-between gap-32">
           {places.map((place) => (

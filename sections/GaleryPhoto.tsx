@@ -1,13 +1,12 @@
 "use client";
 
 import DomeGallery from "@/components/DomeGallery";
+import Heading from "@/components/Heading";
 
 export default function GaleyPhoto() {
   return (
     <main className="flex flex-col space-y-8 items-center justify-center">
-      <h1 className="font-bold text-2xl md:text-4xl max-w-lg text-center">
-        SNAPSHOTS OF JAPAN <br />— Nihon no sunappushotto
-      </h1>
+      <Heading title="SNAPSHOTS OF JAPAN" title2="— Nihon no sunappushotto" />
       <div style={{ width: "95vw", height: "100vh" }}>
         <DomeGallery
           fit={0.8}

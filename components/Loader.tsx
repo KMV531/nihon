@@ -3,54 +3,82 @@
 import { useState, useEffect } from "react";
 
 const Loader = () => {
-  const [loading, setLoading] = useState(true);
+  const [isVisible, setIsVisible] = useState(true); // Manages presence in the DOM
+  const [opacity, setOpacity] = useState(1); // Manages the visual fade effect
+  const [phrase, setPhrase] = useState(
+    "DANCING SPEEDS UP THE LOADING. TRUST US, WE CHECKED.",
+  );
 
-  // 1. Gérer le timer
   useEffect(() => {
+    // 1. Disable scrolling when the component mounts
+    document.body.style.overflow = "hidden";
+
     const timer = setTimeout(() => {
-      setLoading(false);
-    }, 4000);
-    return () => clearTimeout(timer);
+      // 2. Trigger the visual fade-out (opacity)
+      setOpacity(0);
+
+      // 3. Wait for the transition to finish (e.g., 500ms) before removing from DOM and re-enabling scroll
+      setTimeout(() => {
+        setIsVisible(false);
+        document.body.style.overflow = "auto";
+      }, 500);
+    }, 6000); // Total time the characters dance
+
+    return () => {
+      // Cleanup: ensure scroll is restored and timers are cleared
+      document.body.style.overflow = "auto";
+      clearTimeout(timer);
+    };
   }, []);
 
-  // 2. Gérer le scroll de manière isolée (le plus fiable)
   useEffect(() => {
-    if (loading) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
+    // Switch to the second funny phrase halfway through (after 2.5 seconds)
+    const phraseTimer = setTimeout(() => {
+      setPhrase("IF YOU'RE BORED, YOU CAN DANCE WITH US. NO ONE IS WATCHING.");
+    }, 3000);
 
-    // Optionnel : Nettoyage si le composant est démonté brutalement
-    return () => {
-      document.body.style.overflow = "auto";
-    };
-  }, [loading]); // S'exécute à chaque fois que 'loading' change
+    // Keep your main loader exit logic here (4000ms)
+    // ...
 
-  if (!loading) return null;
+    return () => clearTimeout(phraseTimer);
+  }, []);
+
+  if (!isVisible) return null;
 
   return (
-    <div className="fixed inset-0 z-9999 bg-black flex flex-col items-center justify-center">
+    <div
+      style={{ transition: "opacity 0.5s ease-in-out", opacity: opacity }}
+      className="fixed inset-0 z-9999 bg-black flex flex-col items-center justify-center"
+    >
+      <div className="relative mt-10">
+        {/* The Bubble */}
+        <div className="bg-white text-black px-6 py-3 rounded-2xl font-bold text-center shadow-[0_0_20px_rgba(255,255,255,0.3)] mb-1 animate-bounce">
+          {phrase}
+          {/* The "Tail" of the bubble (the triangle pointing down to the cats) */}
+          <div
+            className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-0 
+      border-l-[10px] border-l-transparent 
+      border-t-[15px] border-t-white 
+      border-r-[10px] border-r-transparent"
+          ></div>
+        </div>
+      </div>
+
       {/* Conteneur de tes 4 persos */}
       <div className="flex gap-4 mb-8">
-        <img src="/images/gifs/aqua.gif" alt="dance" className="w-24 h-24" />
         <img
           src="/images/gifs/hidamari-sketch-miyako.gif"
           alt="dance"
-          className="w-24 h-24"
+          className="w-30 h-30"
         />
+        <img src="/images/gifs/aqua.gif" alt="dance" className="w-30 h-30" />
+        <img src="/images/gifs/osaka.gif" alt="dance" className="w-30 h-30" />
         <img
           src="/images/gifs/hsr-evernight-dance.gif"
           alt="dance"
-          className="w-24 h-24"
+          className="w-30 h-30"
         />
-        <img src="/images/gifs/osaka.gif" alt="dance" className="w-24 h-24" />
       </div>
-
-      {/* Ton texte de chargement */}
-      <p className="text-white font-mono animate-pulse text-lg">
-        Loading sushis...
-      </p>
     </div>
   );
 };
