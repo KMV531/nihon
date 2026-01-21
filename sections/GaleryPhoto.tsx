@@ -5,7 +5,7 @@ import Heading from "@/components/Heading";
 
 export default function GaleyPhoto() {
   return (
-    <main className="flex flex-col space-y-8 items-center justify-center">
+    <main className="hidden lg:flex flex-col space-y-8 items-center justify-center">
       <Heading title="SNAPSHOTS OF JAPAN" title2="— Nihon no sunappushotto" />
       <div style={{ width: "95vw", height: "100vh" }}>
         <DomeGallery

@@ -27,7 +27,7 @@ const CulturalHighlightcards = [
 
 const CulturalHighlights = () => {
   return (
-    <main className="max-w-5xl mx-auto flex items-center justify-between">
+    <main className="max-w-5xl mx-auto hidden lg:flex items-center justify-between flex-col lg:flex-row">
       <Heading other="Essential Highlights: Culture & Landmarks" />
       <div style={{ height: "450px", position: "relative" }}>
         <CardSwap

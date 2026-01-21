@@ -24,7 +24,7 @@ const Footer = () => {
   return (
     <footer className="mt-32 mb-20 flex flex-col space-y-8 items-center justify-center">
       <Heading title="UNLOCKED: THE DEV TEAM" title2="- Kaihatsu chimu" />
-      <div className="flex items-center justify-center gap-8">
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-8">
         <motion.div
           ref={ref}
           variants={profileCard1}

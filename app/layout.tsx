@@ -25,13 +25,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" id="root">
+    <html lang="en" data-scroll-behavior="smooth">
       <head>
         {/* ✅ Explicit link fallback (optional, Next will auto inject from metadata too) */}
         <link rel="icon" href="/icons/japan-logo.webp" type="image/webp" />
       </head>
       <body className={`${rokkitt.variable} ${roboto.variable} antialiased`}>
-        <Loader />
+        <div className="hidden lg:block">
+          <Loader />
+        </div>
         {children}
       </body>
     </html>

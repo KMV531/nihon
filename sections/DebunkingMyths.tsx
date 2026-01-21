@@ -64,7 +64,7 @@ const items = [
 
 const DebunkingMyths = () => {
   return (
-    <main className="my-40 mask-[linear-gradient(to_bottom,transparent,black_20%,black_75%,transparent)]">
+    <main className="hidden lg:block my-40 mask-[linear-gradient(to_bottom,transparent,black_20%,black_75%,transparent)]">
       <section>
         <Heading
           title="DEBUGGING THE CLICHÉS"
