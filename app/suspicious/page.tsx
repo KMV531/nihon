@@ -10,7 +10,7 @@ const SuspiciousPage = () => {
     document.cookie = "passed_troll=true; path=/; max-age=3600";
 
     // Now send them home. The middleware will see the cookie and let them in!
-    router.push("/");
+    router.replace("/?loading=true");
   }
 
   return (
@@ -37,8 +37,7 @@ const SuspiciousPage = () => {
           HMMM... SUSPICIOUS!
         </h2>
 
-        <p className="text-white font-mono text-xl">
-          {/* &quot;STOP GIVING ME WORK, BUY YOURSELF A LAPTOP.&quot; 💻🔥 */}I
+        <p className="text-white font-mono text-xl max-w-md">
           KNOW YOU ARE NOT ON A PC... BUT I CAN&apos;T PROVE IT!
         </p>
 

@@ -37,9 +37,6 @@ const Loader = () => {
       setPhrase("IF YOU'RE BORED, YOU CAN DANCE WITH US. NO ONE IS WATCHING.");
     }, 3000);
 
-    // Keep your main loader exit logic here (4000ms)
-    // ...
-
     return () => clearTimeout(phraseTimer);
   }, []);
 

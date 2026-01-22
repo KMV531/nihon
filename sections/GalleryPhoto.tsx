@@ -3,7 +3,7 @@
 import DomeGallery from "@/components/DomeGallery";
 import Heading from "@/components/Heading";
 
-export default function GaleyPhoto() {
+export default function GalleryPhoto() {
   return (
     <main className="hidden lg:flex flex-col space-y-8 items-center justify-center">
       <Heading title="SNAPSHOTS OF JAPAN" title2="— Nihon no sunappushotto" />

@@ -6,7 +6,7 @@ const AbortScreen = () => {
   const router = useRouter();
 
   function handleClick() {
-    router.push("/suspicious");
+    router.replace("/suspicious");
   }
 
   return (
@@ -33,9 +33,8 @@ const AbortScreen = () => {
           ABORT MISSION!
         </h2>
 
-        <p className="text-white font-mono text-xl">
-          {/* &quot;STOP GIVING ME WORK, BUY YOURSELF A LAPTOP.&quot; 💻🔥 */}
-          ERROR 404: SCREEN TOO SMALL, DEVELOPER&apos;S EGO TOO BIG.
+        <p className="text-white font-mono text-xl max-w-md">
+          ERROR 403: SCREEN TOO SMALL, DEVELOPER&apos;S EGO TOO BIG.
         </p>
 
         <span className="mt-5 mb-4 text-white/50 italic max-w-xs text-lg capitalize">

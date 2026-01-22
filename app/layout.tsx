@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Rokkitt, Roboto } from "next/font/google";
 import "./globals.css";
-import Loader from "@/components/Loader";
+import Loader from "@/components/Loader/Loader";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const rokkitt = Rokkitt({
   variable: "--font-rokkitt",
@@ -27,13 +28,13 @@ export default function RootLayout({
   return (
     <html lang="en" data-scroll-behavior="smooth">
       <head>
-        {/* ✅ Explicit link fallback (optional, Next will auto inject from metadata too) */}
         <link rel="icon" href="/icons/japan-logo.webp" type="image/webp" />
       </head>
       <body className={`${rokkitt.variable} ${roboto.variable} antialiased`}>
         <div className="hidden lg:block">
           <Loader />
         </div>
+        <ScrollToTop />
         {children}
       </body>
     </html>
