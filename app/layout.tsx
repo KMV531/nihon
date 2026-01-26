@@ -3,6 +3,7 @@ import { Rokkitt, Roboto } from "next/font/google";
 import "./globals.css";
 import Loader from "@/components/Loader/Loader";
 import ScrollToTop from "@/components/ScrollToTop";
+import SakuraCanvas from "@/components/SakuraCanvas";
 
 const rokkitt = Rokkitt({
   variable: "--font-rokkitt",
@@ -84,6 +85,7 @@ export default function RootLayout({
         <div className="hidden lg:block">
           <Loader />
         </div>
+        <SakuraCanvas />
         <ScrollToTop />
         {children}
       </body>
