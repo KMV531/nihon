@@ -42,7 +42,7 @@ const SuspiciousPage = () => {
         </p>
 
         <span className="mt-5 mb-4 text-white/50 italic text-lg capitalize max-w-md">
-          (I&apos;ll let you in, but you&apos;re only seeing 20% of my power.
+          (I&apos;ll let you in, but you&apos;re only seeing 10% of my power.
           Get a PC for the full flex.)
         </span>
 

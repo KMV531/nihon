@@ -5,7 +5,6 @@ import ProfileCard from "@/components/ProfileCard";
 import ProfileCard2 from "@/components/ProfileCard2";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import Copyright from "../components/Copyright";
 
 const Footer = () => {
   const ref = useRef(null);
@@ -82,7 +81,15 @@ const Footer = () => {
         </motion.div>
       </div>
 
-      <Copyright />
+      <div className="w-full py-8 border-t border-white/20">
+        <div className="max-w-7xl mx-auto px-6 flex flex-col items-center">
+          <p className="text-white/60 font-mono text-xs text-center leading-relaxed">
+            © {new Date().getFullYear()} NIHON. All rights reserved. Any
+            attempts to view this on a 2014 Nokia will result in immediate
+            judgment from the Sensei.
+          </p>
+        </div>
+      </div>
     </footer>
   );
 };
